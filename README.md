@@ -30,6 +30,13 @@ go build -o yakaigateway.exe .
 ./yakaigateway.exe -listen 0.0.0.0:8787 -verbose
 ```
 
+交叉編譯三平台（輸出到 `dist/`）：
+
+```powershell
+./build.ps1              # windows/amd64、linux/amd64、darwin/arm64
+./build.ps1 -SkipTests   # 跳過 vet/test
+```
+
 客戶端指向 `http://127.0.0.1:8787`，API key 任意（會被丟棄替換）。
 
 ### Claude Code
